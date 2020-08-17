@@ -4,7 +4,7 @@ import asyncio
 from config import *
 from commands import commands
 from db.Registration import *
-from db.fonction.is_player import *
+from db.function.is_player import *
 
 class Engine():
 
