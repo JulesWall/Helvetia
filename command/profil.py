@@ -8,4 +8,4 @@ class Profil():
         self.bot = bot
     
     async def run(self):
-        await self.channel.send("Profile")
+        await self.channel.send("Profil")
