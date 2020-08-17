@@ -9,4 +9,4 @@ EMBEDFOOTERS = 'Bot Owner: Jules#3024, Bot version: ``x.x.x``'
 is_maintenance = True
 MAINTENANCE_AUTHORIZE = [OWNER[0]]
 
-TOKEN = 'NTEyNDEyMjI5NzY5ODg3NzQ1.W-yzEw.JJNdsVBxEvSgOYR364nl8sCz3_I'
+TOKEN = ''
