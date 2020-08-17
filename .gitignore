@@ -6,5 +6,4 @@
 
 /__pycache__
 /command/__pycache__
-/db/__pycache__
-db/fonction/__pycache__
+/db/__pycache__/
