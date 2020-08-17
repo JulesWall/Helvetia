@@ -3,3 +3,7 @@
 
 /GD.txt
 /Config.py
+
+/__pycache__
+/command/__pycache__
+/db/__pycache__/
