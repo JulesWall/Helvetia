@@ -3,5 +3,7 @@ from command.game.profil import *
 
 commands = {
     "ping":[Ping, False],
-    "profil":[Profil, True]
+    "profil":[Profil, True],
+    "p":[Profil, True],
+    "pro":[Profil, True]
 }

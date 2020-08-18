@@ -1,4 +1,5 @@
 import discord 
+from db.Profil import *
 
 class Profil():
 
@@ -8,4 +9,5 @@ class Profil():
         self.bot = bot
     
     async def run(self):
-        await self.channel.send("Profil")
+        profil_data = ProfilData(self.message.author.id)
+        await self.channel.send(f"**BTC :** ``{profil_data.btc}`` \n**Dollars :** ``{profil_data.dollars}``")
