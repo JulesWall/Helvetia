@@ -13,9 +13,8 @@ class Eval:
             import os
             command = str(self.message.content[6:])
             try:
-                output = eval(command)
+                output = await eval(command)
                 await self.message.channel.send(output)
             except Exception as e:
                 error = "`ERROR`\n```py\n{0}```".format(e)
                 await self.message.channel.send(error)
-                
