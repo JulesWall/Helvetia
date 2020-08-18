@@ -34,3 +34,4 @@ class Engine():
                     import time
                     time.time()
                     NewPlayer(self.message.author.id, self.message.author.name, time.time())
+                    await self.message.channel.send(str(Text("fr", "registration_confirm").get()))
