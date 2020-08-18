@@ -19,7 +19,6 @@ class Engine():
             if is_maintenance and self.message.author.id not in MAINTENANCE_AUTHORIZE:
                 pass
             else:
-                self.message.content = self.message.content.lower()
                 try:
                     command_info = commands.get(self.message.content[1:].split()[0])
                     command = command_info[0]
