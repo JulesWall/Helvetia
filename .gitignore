@@ -5,6 +5,8 @@
 /Config.py
 
 /__pycache__
+/function/__pycache__
+/text/__pycache__
 /command/game/__pycache__
 /command/utils/__pycache__
 /command/__pycache__
