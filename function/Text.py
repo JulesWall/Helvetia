@@ -9,4 +9,7 @@ class Text:
     def get(self):
         with open(f'lang/{self.lang}.json') as f:
             data = json.load(f)
-        return data.get(self.key)  
+        try: 
+            return data.get(self.key)
+        except:
+            return 'undefined'  
