@@ -1,5 +1,6 @@
 import discord 
 from config import *
+from logs.bankwatch import *
 import json
 
 class Bank():
@@ -14,6 +15,7 @@ class Bank():
         with open(f"db/files/bank.json") as f:
             data = json.load(f)
         self.data = data
+        self.initial_BTC = self.data.get("BankStorage")
         import time
         if time.time() - self.data["BankTime"] > 3600:
             new_bank_storage = self.data["BankStorage"] * ((100 - (int((time.time() - self.data["BankTime"])/3600)*0.25))/100)
@@ -34,6 +36,14 @@ class Bank():
         embed.add_field(name="Daily limit", value=f"{0.02*self.bank_storage} BTC", inline=False)
         embed.set_footer(text=f"{EMBEDFOOTERS}")
         await self.channel.send(embed=embed)
+
+        if self.initial_BTC != self.bank_storage:
+            embed=discord.Embed(title="Bank storage change")
+            embed.add_field(name="Convert Price", value=f"1 BTC = {self.half_price/(self.bank_storage/2)}", inline=False)
+            embed.add_field(name="Daily limit", value=f"{0.02*self.bank_storage} BTC", inline=False)
+            embed.add_field(name="Storage", value=f"{self.bank_storage}")
+            embed.set_footer(text=f"{EMBEDFOOTERS}")
+            await BankWatch(embed, self.bot).send()
 
         
         
