@@ -1,3 +1,4 @@
 {
-    "registration_confirm":"Registration ok !"
+    "registration_confirm":"Registration ok !",
+    "Ping":"La latence du bot est de : "
 }

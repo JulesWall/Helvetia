@@ -1,4 +1,5 @@
 import discord 
+from function.Text import *
 
 class Ping():
 
@@ -10,6 +11,6 @@ class Ping():
     async def run(self):
         import time
         now = time.monotonic()
-        msg = await self.channel.send('Bot latency is :')
+        msg = await self.channel.send(f'{str(Text("fr", "Ping").get())}')
         ping = int((time.monotonic() - now) * 1000)
-        await msg.edit(content=f'Bot latency is : ``{ping} ms``')
+        await msg.edit(content=f'{str(Text("fr", "Ping").get())} ``{ping} ms``')
