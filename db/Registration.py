@@ -10,12 +10,13 @@ class NewPlayer:
         self.user_id = user_id
         self.user_name = user_name
         self.creation_date = date
+        self.btc = 0
+        self.dollar = 0
 
         db = MySQLdb.connect(user=USERDATABASE, passwd=PASSWORDDATABASE, host="localhost", db=DATABASE)#connexion
         cursor = db.cursor() #création du cursor
-        sql = f"INSERT INTO `player`(`user_id`, `user_name`, `creation_date`)\
-        VALUES ({self.user_id},'{self.user_name}','{self.creation_date}')"
+        sql = f"INSERT INTO `player`(`user_id`, `user_name`, `creation_date``btc`, `dollar`)\
+        VALUES ({self.user_id},'{self.user_name}','{self.creation_date},{self.btc},{self.dollar}')"
         cursor.execute(sql) #fonction sql
         db.commit()
         db.close()
-        
