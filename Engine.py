@@ -5,6 +5,7 @@ from config import *
 from commands import commands
 from db.Registration import *
 from db.function.is_player import *
+from function.Text import *
 
 class Engine():
 
@@ -33,4 +34,3 @@ class Engine():
                     import time
                     time.time()
                     NewPlayer(self.message.author.id, self.message.author.name, time.time())
-                    await self.message.channel.send("Registration ok")

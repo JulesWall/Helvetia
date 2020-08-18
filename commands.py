@@ -1,5 +1,5 @@
-from command.ping import *
-from command.profil import *
+from command.utils.ping import *
+from command.game.profil import *
 
 commands = {
     "ping":[Ping, False],
