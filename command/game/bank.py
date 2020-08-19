@@ -43,7 +43,7 @@ class Bank():
             embed.add_field(name="Daily limit", value=f"{0.02*self.bank_storage} BTC", inline=False)
             embed.add_field(name="Storage", value=f"{self.bank_storage}")
             embed.set_footer(text=f"{EMBEDFOOTERS}")
-            await BankWatch(embed, self.bot).sendlog()
+            await BankWatch(embed, self.bot).sendlog(self.message)
 
         
         
