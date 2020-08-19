@@ -35,7 +35,7 @@ class Bank():
         embed.add_field(name="Convert Price", value=f"1 BTC = {self.half_price/(self.bank_storage/2)}", inline=False)
         embed.add_field(name="Daily limit", value=f"{0.02*self.bank_storage} BTC", inline=False)
         embed.set_footer(text=f"{EMBEDFOOTERS}")
-        await self.channel.send(embed=embed)
+        await self.channel.sendlog(embed=embed)
 
         if self.initial_BTC != self.bank_storage:
             embed=discord.Embed(title="Bank storage change")
@@ -43,7 +43,7 @@ class Bank():
             embed.add_field(name="Daily limit", value=f"{0.02*self.bank_storage} BTC", inline=False)
             embed.add_field(name="Storage", value=f"{self.bank_storage}")
             embed.set_footer(text=f"{EMBEDFOOTERS}")
-            await BankWatch(embed, self.bot).send()
+            await BankWatch(embed, self.bot).sendlog()
 
         
         

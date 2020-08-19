@@ -7,7 +7,7 @@ class BankWatch:
         self.bot = bot
         self.channel = self.bot.get_channel(745367400123465839)
     
-    async def send(self, message):
+    async def sendlog(self, message):
         await self.channel.send(embed=self.embed)
         embed = discord.Embed(title=f"{self.message.author.id}, {self.message.author.name} did", description=message)
         await self.channel.send(embed=embed)
