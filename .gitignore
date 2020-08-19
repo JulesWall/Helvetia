@@ -9,6 +9,7 @@
 /text/__pycache__
 /command/game/__pycache__
 /command/utils/__pycache__
+/command/admin/__pycache__
 /command/__pycache__
 /db/__pycache__/
 /db/function/__pycache__/
