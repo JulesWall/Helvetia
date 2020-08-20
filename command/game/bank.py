@@ -27,8 +27,7 @@ class Bank():
         self.BankTime = data.get("BankTime")
         self.half_price = data.get("HalfPrice")
     
-    async def run(self):
-        
+    async def run(self):        
         embed=discord.Embed(title="Bank", description="Use `!bank convert <amout>` to convert BTC in dollars", color=0x1dc007)
         embed.add_field(name="Convert Price", value=f"1 BTC = {self.half_price/(self.bank_storage/2)}", inline=False)
         embed.add_field(name="Daily limit", value=f"{0.02*self.bank_storage} BTC", inline=False)
