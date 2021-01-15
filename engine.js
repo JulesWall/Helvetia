@@ -1,16 +1,13 @@
 const Discord = require("discord.js"); // Voir ./index.js
 require("dotenv").config(); // Voir ./index.js
-// import asyncio
 
-// from config import *
-// from commands import commands
-// from db.Registration import *
-// from db.function.is_player import *
-// from function.Text import *
+/*
+* Function
+*/
 
-// class Engine():
+const querryAsync = require("./db/function/querryAsync.js");
 
-module.exports = function(message, client) {
+module.exports = async function(message, client) {
     if (message.content[0] !== process.env.PREFIX) return; // Regarde si y a le prefix
     if (process.env.is_maintenance && process.env.MAINTENANCE_AUTHORIZE.split(/ +/g).includes(message.author.id) !== true) return; // Check si on est en maintenance
     if (message.channel.type === "dm") return; // Check si le message est en dm
@@ -26,5 +23,7 @@ module.exports = function(message, client) {
     if (!cmd) return; // Si pas de commande return
     const args = message.content.split(" "); // Crée les arguments
     const lang = require("./lang/fr.json"); // Get la lang
-    cmd.run(message, client, args, lang); // Run la commande
+    var result = await querryAsync(`SELECT * FROM player WHERE user_id = ${message.author.id}`);
+    if (result.length <= 0) return require("./db/NewPlayer.js")(message, client);
+    else cmd.run(message, client, args, lang, querryAsync); // Run la commande
 };
