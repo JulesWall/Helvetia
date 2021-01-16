@@ -1,4 +1,18 @@
 {
-    "registration_confirm":"Registration ok !",
-    "Ping":"La latence du bot est de : "
+    "ping": {
+        "latency": "La latence du bot est de : "
+    },
+    "profil": {
+        "profil": "Profile",
+        "level": "Niveau",
+        "exp": "Expérience",
+        "ressource": "Ressources",
+        "stone": "Pierre",
+        "iron": "Fer",
+        "gold": "Or",
+        "wood": "Bois"
+    },
+    "embed": {
+        "footer": "Helvetia par Mine_Clash_34#6666 & Jules#4632"
+    }
 }
