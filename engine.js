@@ -6,6 +6,7 @@ require("dotenv").config(); // Voir ./index.js
 */
 
 const querryAsync = require("./db/function/querryAsync.js");
+const addEmoji = require("./function/addEmoji.js");
 
 module.exports = async function(message, client) {
     if (message.content[0] !== process.env.PREFIX) return; // Regarde si y a le prefix
@@ -22,8 +23,8 @@ module.exports = async function(message, client) {
     const cmd = client.commands.get(commandFilter.join("")); // Get le code de la commande
     if (!cmd) return; // Si pas de commande return
     const args = message.content.split(" "); // Crée les arguments
-    const lang = require("./lang/fr.json"); // Get la lang
-    var result = await querryAsync(`SELECT * FROM player WHERE user_id = ${message.author.id}`);
+    var result = await querryAsync(`SELECT * FROM user_info WHERE discord_id = ${message.author.id}`);
     if (result.length <= 0) return require("./db/NewPlayer.js")(message, client);
-    else cmd.run(message, client, args, lang, querryAsync); // Run la commande
+    const lang = require(`./lang/${result[0].lang}.json`); // Get la lang
+    cmd.run(message, client, args, lang, querryAsync, addEmoji); // Run la commande
 };
