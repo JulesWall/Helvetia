@@ -14,5 +14,21 @@
     },
     "embed": {
         "footer": "Helvetia par Mine_Clash_34#6666 & Jules#4632"
+    },
+    "build": {
+        "stoneMine": "Mine de Pierre",
+        "woodMine": "Mine de Bois",
+        "ironMine": "Mine de Fer",
+        "goldMine": "Mine d'Or"
+    },
+    "mine": {
+        "mined": "Vous minez pendant de longues heures et vous trouvez :",
+        "epuised": "Après cet effort intensive, vous ne voulez que vous reposez ... Vous pourrez reminer dans ",
+        "waiting": "vous ne vous êtes pas encore assez reposé ! Réessayer dans :"
+    },
+    "time": {
+        "hours": "heures",
+        "minutes": "minutes",
+        "seconds": "secondes"
     }
 }
