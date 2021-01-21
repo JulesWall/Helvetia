@@ -14,5 +14,9 @@ module.exports = {
         ('${pseudo}', ${message.author.id},'${lang}')`)
         querryAsync(`INSERT INTO user_profile (discord_id) VALUES\
         (${message.author.id})`)
+        querryAsync(`INSERT INTO user_build (discord_id) VALUES\
+        (${message.author.id})`)
+        querryAsync(`INSERT INTO user_cooldown (discord_id) VALUES\
+        (${message.author.id})`)
     }
 }
