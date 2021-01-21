@@ -1,0 +1,58 @@
+{
+    "stoneMine": {
+        "baseCost": {
+            "stone": 0,
+            "wood": 1,
+            "iron": 1,
+            "gold": 1
+        },
+        "multiplicator": {
+            "stone": 2,
+            "wood": 2,
+            "iron": 1.5,
+            "gold": 1.5
+        }
+    },
+    "woodMine": {
+        "baseCost": {
+            "stone": 1,
+            "wood": 1,
+            "iron": 1,
+            "gold": 1
+        },
+        "multiplicator": {
+            "stone": 2,
+            "wood": 2,
+            "iron": 1.5,
+            "gold": 1.5
+        }
+    },
+    "ironMine": {
+        "baseCost": {
+            "stone": 1,
+            "wood": 1,
+            "iron": 1,
+            "gold": 1
+        },
+        "multiplicator": {
+            "stone": 2,
+            "wood": 2,
+            "iron": 1.5,
+            "gold": 1.5
+        }
+    },
+    "goldMine": {
+        "baseCost": {
+            "stone": 1,
+            "wood": 1,
+            "iron": 1,
+            "gold": 1
+        },
+        "multiplicator": {
+            "stone": 2,
+            "wood": 2,
+            "iron": 1.5,
+            "gold": 1.5
+        }
+    }
+}
